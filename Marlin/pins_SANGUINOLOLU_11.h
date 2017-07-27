@@ -31,17 +31,17 @@
 
 #if MB(MELZI)
   #define LED_PIN            27 /* On some broken versions of the Sanguino libraries the pin definitions are wrong, which then needs LED_PIN as pin 28. But you better upgrade your Sanguino libraries! See #368. */
-  #define FAN_PIN            4 // Works for Panelolu2 too
+  #define FAN_PIN            27 // Works for Panelolu2 too
 #endif
 
 #if MB(STB_11)
-  #define FAN_PIN            4
+  #define FAN_PIN            27
   //  Uncomment this if you have the first generation (V1.10) of STBs board
   #define LCD_PIN_BL         17 // LCD backlight LED
 #endif
 
 #if MB(AZTEEG_X1)
-  #define FAN_PIN            4
+  #define FAN_PIN            27
 #endif
 
 #ifdef NUM_SERVOS
@@ -69,19 +69,19 @@
 
 #ifdef SANGUINOLOLU_V_1_2
 
-  #define HEATER_BED_PIN     12 // (bed)
+  #define HEATER_BED_PIN     4 // (bed)
   #define X_ENABLE_PIN       14
   #define Y_ENABLE_PIN       14
   #define Z_ENABLE_PIN       26
   #define E0_ENABLE_PIN      14
 
   #ifdef LCD_I2C_PANELOLU2
-    #define FAN_PIN          4 // Uses Transistor1 (PWM) on Panelolu2's Sanguino Adapter Board to drive the fan
+    #define FAN_PIN          27 // Uses Transistor1 (PWM) on Panelolu2's Sanguino Adapter Board to drive the fan
   #endif
 
 #else
 
-  #define HEATER_BED_PIN      14  // (bed)
+  #define HEATER_BED_PIN      4  // (bed)
   #define X_ENABLE_PIN       -1
   #define Y_ENABLE_PIN       -1
   #define Z_ENABLE_PIN       -1
@@ -122,7 +122,7 @@
        // #define LCD_SCREEN_ROT_180
        // #define LCD_SCREEN_ROT_270
      #else // standard Hitachi LCD controller
-     #define LCD_PINS_RS        4
+     #define LCD_PINS_RS        27
      #define LCD_PINS_ENABLE    17
      #define LCD_PINS_D4        30
      #define LCD_PINS_D5        29
